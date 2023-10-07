@@ -3,7 +3,6 @@ import ChoosePlan from "../../sections/choosePlan/ChoosePlan"
 import ChooseWorkOut from "../../sections/chooseWork/ChooseWorkOut"
 import { useEffect, useState } from 'react';
 import Animation from "../../components/animation/Animation"
-import Background from "../../components/background/Background";
 const Home = () => {
 
     useEffect(() => {
@@ -23,7 +22,6 @@ const Home = () => {
                     )
                     : (
                         <>
-                            <Background />
                             <div id="body">
                                 <HeroBanner />
                                 <ChoosePlan />

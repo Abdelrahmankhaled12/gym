@@ -1,7 +1,6 @@
 import "./style.scss"
 import { useSelector } from "react-redux";
 import target from "../../assets/target.png"
-import Background from "../../components/background/Background";
 const Plan = () => {
   const store = useSelector(link => link);
   const links = store.link.links
@@ -11,7 +10,6 @@ const Plan = () => {
   return (
 
     <>
-      <Background />
       <div id="body" className="plan">
         <div className="title">
           <h2>{title}</h2>
