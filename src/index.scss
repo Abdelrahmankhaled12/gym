@@ -1,0 +1,35 @@
+:root {
+  --black: #04152d;
+  --black-lighter: #1c4b91;
+  --black-light: #173d77;
+  --orange: #f36100;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  color: white;
+  background: #000;
+  line-height: 1.7;
+}
+
+body * {
+  z-index: 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

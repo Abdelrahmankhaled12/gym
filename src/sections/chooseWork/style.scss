@@ -1,0 +1,153 @@
+@import "../../mixins.scss";
+
+.chooseWork {
+  background-color: rgb(8 8 8 / 69%);
+  height: 80vh;
+  color: var(--black-light);
+  position: relative;
+
+  h1 {
+    text-align: center;
+    padding: 40px 0px;
+    color: white;
+    font-size: 50px;
+    svg {
+      color: var(--orange);
+    }
+  }
+  .filters {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    @include md {
+      flex-direction: row;
+    }
+    .react-select-container {
+      &.genresDD {
+        width: 100%;
+        flex: 1;
+      }
+      &.genresDD-1 {
+        z-index: 10000;
+      }
+      &.genresDD-2 {
+        width: 100%;
+        flex: 1;
+        z-index: 1000;
+      }
+      &.genresDD-3 {
+        z-index: 100;
+      }
+      .react-select__control {
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+        background-color: var(--black-light);
+        border-radius: 20px;
+        .react-select__value-container {
+          .react-select__placeholder,
+          .react-select__input-container {
+            color: white;
+            margin: 0 10px;
+          }
+        }
+        .react-select__single-value {
+          color: white;
+        }
+        .react-select__multi-value {
+          background-color: var(--black3);
+          border-radius: 10px;
+          .react-select__multi-value__label {
+            color: white;
+          }
+          .react-select__multi-value__remove {
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            &:hover {
+              color: var(--black-lighter);
+            }
+          }
+        }
+      }
+      .react-select__menu {
+        top: 40px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .progress {
+    position: relative;
+    .void {
+      background-color: white;
+      width: 100%;
+      height: 20px;
+      border-radius: 20px;
+      margin: 25px auto;
+    }
+    .busy {
+      background-color: var(--orange);
+      height: 20px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.5s;
+    }
+  }
+  button {
+    background-color: var(--orange);
+    color: white;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      background-color: white;
+      color: orange;
+    }
+  }
+  .hide {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  p {
+    color: white;
+    text-align: center;
+    font-size: 29px;
+  }
+  a {
+    background-color: var(--orange);
+    color: white;
+    width: 150px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+    text-align: center;
+    &:hover {
+      background-color: white;
+      color: orange;
+    }
+  }
+  .icon {
+    svg {
+      font-size: 29px;
+      color: white;
+      display: block;
+      width: fit-content;
+      margin: 38px auto;
+    }
+  }
+}

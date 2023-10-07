@@ -1,0 +1,51 @@
+@import "../../mixins.scss";
+
+.heroBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  .opacity-layer {
+    width: 100%;
+    height: 190px;
+    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, rgb(8 8 8 / 69%) 79.17%);
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+  .heroBannerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      @include md {
+        margin-bottom: 0;
+        font-size: 80px;
+      }
+    }
+    button {
+      padding: 10px 25px;
+      color: white;
+      background-color: var(--orange);
+      width: 150px;
+      font-size: 18px;
+      border: 1px solid var(--orange);
+      border-radius: 6px;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        color: var(--orange);
+        background-color: transparent;
+      }
+    }
+  }
+}
