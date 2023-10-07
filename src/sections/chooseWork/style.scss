@@ -16,66 +16,26 @@
     }
   }
   .filters {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     @include md {
-      flex-direction: row;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    .react-select-container {
-      &.genresDD {
-        width: 100%;
-        flex: 1;
+    .checkBox {
+      display: flex;
+      align-items: center;
+      input {
+        width: 20px;
+        height: 20px;
       }
-      &.genresDD-1 {
-        z-index: 10000;
-      }
-      &.genresDD-2 {
-        width: 100%;
-        flex: 1;
-        z-index: 1000;
-      }
-      &.genresDD-3 {
-        z-index: 100;
-      }
-      .react-select__control {
-        border: 0;
-        outline: 0;
-        box-shadow: none;
-        background-color: var(--black-light);
-        border-radius: 20px;
-        .react-select__value-container {
-          .react-select__placeholder,
-          .react-select__input-container {
-            color: white;
-            margin: 0 10px;
-          }
-        }
-        .react-select__single-value {
-          color: white;
-        }
-        .react-select__multi-value {
-          background-color: var(--black3);
-          border-radius: 10px;
-          .react-select__multi-value__label {
-            color: white;
-          }
-          .react-select__multi-value__remove {
-            background-color: transparent;
-            color: white;
-            cursor: pointer;
-            &:hover {
-              color: var(--black-lighter);
-            }
-          }
-        }
-      }
-      .react-select__menu {
-        top: 40px;
-        margin: 0;
-        padding: 0;
+      label {
+        font-size: 22px;
+        color: #777;
+        margin-left: 10px;
       }
     }
+
   }
   .progress {
     position: relative;
