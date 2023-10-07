@@ -126,4 +126,23 @@
     display: block;
     margin: 20px auto;
   }
+  a {
+    background-color: var(--orange);
+    color: white;
+    width: 150px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+    text-align: center;
+    &:hover {
+      background-color: white;
+      color: orange;
+    }
+  }
 }

@@ -9,7 +9,13 @@ import { faBullseye } from '@fortawesome/free-solid-svg-icons'
 import Aos from "aos";
 import "aos/dist/aos.css"
 import target from "../../assets/target.png"
+import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux'
+import { getLinks , getTitle} from '../../store/linksSlice';
+
 const ChoosePlan = () => {
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         Aos.init({
@@ -59,10 +65,10 @@ const ChoosePlan = () => {
             setFrequencyValue(null)
         } else {
             results.forEach(element => {
-                console.log(element.values.join("|"));
-                console.log(goalValue + "|" + levelValue + "|" + frequencyValue);
                 if (element.values.join("|") === (goalValue + "|" + levelValue + "|" + frequencyValue)) {
-                    setResult(element.result)
+                    setResult(goalValue + " - " + levelValue + " - " + (frequencyValue === "2" ? "8 workouts" : "12 workouts"))
+                    dispatch(getTitle(goalValue + " - " + levelValue + " - " + (frequencyValue === "2" ? "8 workouts" : "12 workouts")))
+                    dispatch(getLinks(element.link))
                 }
 
             })
@@ -124,6 +130,7 @@ const ChoosePlan = () => {
                                 <>
                                     <p>Plan : {result}</p>
                                     <img src={target} />
+                                    <Link to={"/plan"}>Go to workouts</Link>
                                 </>
                             }
                         </>
