@@ -2,9 +2,10 @@
 
 .chooseWork {
   background-color: rgb(8 8 8 / 69%);
-  height: 80vh;
+  min-height: 80vh;
   color: var(--black-light);
   position: relative;
+  padding: 35px 10px;
 
   h1 {
     text-align: center;
@@ -17,10 +18,10 @@
   }
   .filters {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 10px;
     @include md {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
     .checkBox {
       display: flex;
